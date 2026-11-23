@@ -41,7 +41,6 @@
   .regions { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; margin: 4px 0 5px; }
   .regions div { color: #fff; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase;
                  text-align: center; padding: 3px 2px; }
-  .regions div span { color: #ffe0b0; font-weight: 700; }
   .regions .r-me { background: var(--red); }
   .regions .r-eu { background: var(--blue); }
   .regions .r-am { background: var(--green); }
@@ -79,6 +78,7 @@
   .tile .st.official { background: #1f3a68; }
   .tile .st.confirmed { background: #23624a; }
   .tile .st.reported { background: #6d6457; }
+  .tile .big.small { font-size: 20px; letter-spacing: -0.4px; }
   .tile .big { position: absolute; left: 6px; bottom: 2px; color: #fff; font: 700 30px Arial;
                letter-spacing: -1.2px; line-height: 1; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
   .tile .rg { position: absolute; right: 0; top: 0; background: rgba(255,255,255,0.93); color: var(--ink);
@@ -123,7 +123,7 @@
 
   <div class="bar">
     <span>The world in one day</span>
-    <span><b>33 stories</b> · 7 regions · every item reported <b>Sunday 22 November 2026</b></span>
+    <span><b>33 stories</b> · 7 regions · every item reported <b>on Sunday 22 Nov</b> · carry-overs marked</span>
   </div>
 
   <div class="mast">
@@ -136,7 +136,7 @@
       <li><b>02:30</b>Four raids hit Sanaa’s fuel depots</li>
       <li><b>06:00</b>Iran’s power cuts begin</li>
       <li><b>12:00</b>COP31's plenary closes with no pact</li>
-      <li><b>15:00</b>Guterres: "no ambiguity in the science"</li>
+      <li><b>15:00</b>Guterres, in Barbados, on the science</li>
       <li><b>16:00</b>Cape police give the toll: ten dead</li>
       <li><b>18:00</b>Bahrain answers Tehran’s radar claim</li>
     </ol>
@@ -187,7 +187,7 @@
     </div>
     <div class="hero">
       <div class="art" style="background:#22364f">
-        <span class="n">2</span><span class="place">MANAMA</span>
+        <span class="n">2</span><span class="place">MANAMA · SAT 21</span>
         <svg viewBox="0 0 300 124" preserveAspectRatio="xMidYMid meet">
           
           <path d="M34 124 V74 l46 -22 v22 l46 -22 v22 l46 -22 v72z" fill="#12212f"/>
@@ -250,7 +250,7 @@
     </div>
     <div class="tile me">
       <div class="scene" style="background:#2a1b1c"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><g fill="#3a4a5f"><rect x="96" y="26" width="108" height="6"/><rect x="100" y="32" width="8" height="26"/><rect x="118" y="32" width="8" height="26"/><rect x="136" y="32" width="8" height="26"/><rect x="154" y="32" width="8" height="26"/><rect x="172" y="32" width="8" height="26"/><rect x="190" y="32" width="8" height="26"/><rect x="92" y="56" width="116" height="6"/></g><g stroke="#8fb2d8" stroke-width="2"><path d="M216 56 V14"/><path d="M216 14 h26 v16 h-26z" fill="#d4342a" stroke="none"/></g></svg>
-        <span class="n">5</span><span class="rg">Jerusalem · Likud</span><span class="st reported">Reported</span><span class="big">7</span></div>
+        <span class="n">5</span><span class="rg">Jerusalem · Likud</span><span class="st reported">Reported</span><span class="big small">Oct 7</span></div>
       <h3>Likud sets terms for a unity cabinet</h3>
       <p class="line">Keep the security zones; no Oct 7 inquiry.</p>
       <div class="src">IANS · 22 Nov</div>
@@ -273,7 +273,7 @@
       <div class="scene" style="background:#241d16"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M54 62 V34 l26 -12 v12 l26 -12 v12 l26 -12 v40z" fill="#3a4a5f"/><g fill="#ffcf7a"><rect x="70" y="40" width="9" height="9"/><rect x="96" y="40" width="9" height="9"/></g><g fill="#ff9d8f" opacity="0.9"><circle cx="176" cy="26" r="7"/><circle cx="192" cy="14" r="5"/><circle cx="204" cy="30" r="4"/></g><path d="M150 62 v-18 h22 v18z" fill="#d4342a"/></svg>
         <span class="n">8</span><span class="rg">Banten · Sat 21</span><span class="st reported">Reported</span><span class="big">24</span></div>
       <h3>Toll from Saturday’s blaze rises</h3>
-      <p class="line">A Sat 21 fire; this is Sunday’s count.</p>
+      <p class="line">A Sat 21 fire; Sunday’s toll rose to 24.</p>
       <div class="src">Xinhua · fire Sat 21</div>
     </div>
     <div class="tile ap">
@@ -281,7 +281,7 @@
         <span class="n">9</span><span class="rg">Manipur · liquor</span><span class="st reported">Reported</span><span class="big">16</span></div>
       <h3>Moonshine toll reaches 16 in Manipur</h3>
       <p class="line">About 600 in hospital; six arrested.</p>
-      <div class="src">Xinhua · fire Sat 21</div>
+      <div class="src">Xinhua · 22 Nov</div>
     </div>
     <div class="tile am">
       <div class="scene" style="background:#2a1b1c"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M48 34 l70 -10 l26 -16 l10 2 l-14 18 l40 -6 l10 6 l-56 14 l-6 18 l-8 2 l2 -18 l-50 6z" fill="#8fb2d8"/><path d="M150 52 h96 v8 h-96z" fill="#3a4a5f"/><g fill="#d4342a"><rect x="196" y="42" width="7" height="10"/><rect x="216" y="42" width="7" height="10"/></g></svg>
@@ -294,7 +294,7 @@
       <div class="scene" style="background:#16232e"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M70 62 V36 l30 -16 l30 16 v26z" fill="#3a4a5f"/><rect x="92" y="46" width="14" height="16" fill="#ffcf7a"/><g stroke="#8fb2d8" stroke-width="2.4" opacity="0.8"><path d="M150 8 l-10 22"/><path d="M172 6 l-10 22"/><path d="M194 10 l-10 22"/><path d="M216 6 l-10 22"/><path d="M238 12 l-10 22"/></g><path d="M182 56 l48 6" stroke="#7a4a1d" stroke-width="5" stroke-linecap="round"/></svg>
         <span class="n">11</span><span class="rg">Porto Alegre · storm</span><span class="st reported">Reported</span><span class="big">3</span></div>
       <h3>Storm kills three in southern Brazil</h3>
-      <p class="line">A city in Porto Alegre · storm; toll rising.</p>
+      <p class="line">Three dead in Porto Alegre as storms cross the state; toll may rise.</p>
       <div class="src">CCTV · 22 Nov</div>
     </div>
     <div class="tile af">
@@ -306,9 +306,9 @@
     </div>
     <div class="tile af">
       <div class="scene" style="background:#241d16"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M150 10 l34 10 v18 c0 14 -14 22 -34 26 c-20 -4 -34 -12 -34 -26 V20z" fill="#3a4a5f"/><path d="M150 24 v14 l-8 8 l10 6" stroke="#8fb2d8" stroke-width="3" fill="none" stroke-linecap="round"/><g fill="#d4342a"><path d="M62 20 l34 10 -34 10z"/><path d="M238 20 l-34 10 34 10z"/></g></svg>
-        <span class="n">13</span><span class="rg">Khartoum · UN</span><span class="st official">Official</span><span class="big">UN</span></div>
+        <span class="n">13</span><span class="rg">Khartoum · UN</span><span class="st official">Official</span><span class="big">4</span></div>
       <h3>UN experts: mercenaries fuel Sudan</h3>
-      <p class="line">Foreign fighters prolong the war, a UN mission says.</p>
+      <p class="line">Fighters and arms from four states, a UN mission says.</p>
       <div class="src">UN · 22 Nov</div>
     </div>
   </div>
@@ -338,7 +338,7 @@
         <li><b>23</b>Galápagos: Floods after El Niño rains close roads and cut power. <i>(CCTV)</i></li>
         <li><b>24</b>Washington: Trump tells Fox he leans toward another strike on Iran without a deal by the new year. <i>(Fox)</i></li>
         <li><b>25</b>Quneitra: A fifth Israeli incursion since dawn, Syrian state media report. <i>(SANA)</i></li>
-        <li><b>26</b>Tokyo: Takaichi was passed over for a Xi meeting at APEC, Asahi reports. <i>(Asahi)</i></li>
+        <li><b>26</b>Tokyo: Takaichi was passed over for a Xi meeting at APEC, which met earlier in November, Asahi reports. <i>(Asahi)</i></li>
         <li><b>27</b>Davao: Candles on the eve of the Maguindanao massacre’s 17th anniversary. <i>(GMA)</i></li>
         <li><b>28</b>Caracas: Delcy Rodríguez urges young people to “believe again” in the country. <i>(Última Hora)</i></li>
         <li><b>29</b>Ravenna: The Humanity 1 heads for port with 43 rescued, 13 of them children. <i>(Ravenna Notizie)</i></li>
