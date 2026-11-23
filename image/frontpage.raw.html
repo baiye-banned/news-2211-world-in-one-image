@@ -26,9 +26,9 @@
   .bar b { color: #ff9d8f; }
 
   .mast { text-align: center; padding: 5px 0 4px; }
-  .mast h1 { font-family: Georgia, "Times New Roman", serif; font-size: 50px; line-height: 0.98; font-weight: 700;
+  .mast h1 { font-family: Georgia, "Times New Roman", serif; font-size: 54px; line-height: 0.98; font-weight: 700;
              letter-spacing: -1.4px; font-variant-numeric: lining-nums tabular-nums; }
-  .mast .dek { font-family: Georgia, serif; font-size: 12.8px; line-height: 1.35; color: #3b352c; margin-top: 3px; }
+  .mast .dek { font-family: Georgia, serif; font-size: 14px; line-height: 1.35; color: #3b352c; margin-top: 3px; }
   .mast .dek i { color: var(--red); font-style: normal; font-weight: 700; }
 
   .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
@@ -70,7 +70,11 @@
 
   .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 8px; }
   .tile { border: 1px solid var(--rule); background: #fbf9f3; display: flex; flex-direction: column; overflow: hidden; }
-  .tile .scene { position: relative; height: 66px; }
+  .tile .scene { position: relative; height: 66px; border-top: 5px solid #475569; }
+  .tile.me .scene { border-top-color: #b3241b; }
+  .tile.ap .scene { border-top-color: #0f6b5c; }
+  .tile.am .scene { border-top-color: #3c5d3a; }
+  .tile.af .scene { border-top-color: #7a4a1d; }
   .tile .scene svg { width: 100%; height: 100%; display: block; padding: 4px 6px; }
   .tile .n { position: absolute; left: 0; top: 0; background: var(--red); color: #fff; font: 700 9.5px Arial; padding: 2px 5px; }
   .tile .st { position: absolute; right: 5px; bottom: 4px; font: 700 7.8px Arial; letter-spacing: 0.08em;
@@ -284,11 +288,11 @@
       <div class="src">Xinhua · 22 Nov</div>
     </div>
     <div class="tile am">
-      <div class="scene" style="background:#2a1b1c"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M48 34 l70 -10 l26 -16 l10 2 l-14 18 l40 -6 l10 6 l-56 14 l-6 18 l-8 2 l2 -18 l-50 6z" fill="#8fb2d8"/><path d="M150 52 h96 v8 h-96z" fill="#3a4a5f"/><g fill="#d4342a"><rect x="196" y="42" width="7" height="10"/><rect x="216" y="42" width="7" height="10"/></g></svg>
-        <span class="n">10</span><span class="rg">Seattle · ICE</span><span class="st reported">Reported</span><span class="big">2</span></div>
-      <h3>Agents seize two on a jet bridge</h3>
-      <p class="line">Masked officers boarded a Seattle flight.</p>
-      <div class="src">AP · 22 Nov</div>
+      <div class="scene" style="background:#2a1b1c"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M70 50 h60 l18 -12 h34 l20 12 h28 v10 h-160z" fill="#8fb2d8"/><g fill="#3a4a5f"><rect x="96" y="36" width="18" height="10" rx="2"/><rect x="120" y="34" width="24" height="12" rx="2"/></g><g fill="#d4342a"><circle cx="104" cy="60" r="7"/><circle cx="222" cy="60" r="7"/></g><g fill="#f4f0e6"><rect x="40" y="14" width="12" height="12"/><rect x="64" y="14" width="12" height="12"/><rect x="88" y="14" width="12" height="12"/><rect x="112" y="14" width="12" height="12"/><rect x="136" y="14" width="12" height="12"/><rect x="160" y="14" width="12" height="12"/><rect x="184" y="14" width="12" height="12"/><rect x="208" y="14" width="12" height="12"/><rect x="232" y="14" width="12" height="12"/><rect x="256" y="14" width="12" height="12"/></g><g fill="#2b3648"><rect x="52" y="14" width="12" height="12"/><rect x="76" y="14" width="12" height="12"/><rect x="100" y="14" width="12" height="12"/><rect x="124" y="14" width="12" height="12"/><rect x="148" y="14" width="12" height="12"/><rect x="172" y="14" width="12" height="12"/><rect x="196" y="14" width="12" height="12"/><rect x="220" y="14" width="12" height="12"/><rect x="244" y="14" width="12" height="12"/></g></svg>
+        <span class="n">10</span><span class="rg">Las Vegas · GP</span><span class="st reported">Reported</span><span class="big">1</span></div>
+      <h3>Verstappen wins in Las Vegas</h3>
+      <p class="line">Hamilton and Leclerc collide; the race ran Sat night local.</p>
+      <div class="src">PA · raced Sat 21</div>
     </div>
     <div class="tile am">
       <div class="scene" style="background:#16232e"><svg viewBox="0 0 300 64" preserveAspectRatio="xMidYMid meet"><path d="M70 62 V36 l30 -16 l30 16 v26z" fill="#3a4a5f"/><rect x="92" y="46" width="14" height="16" fill="#ffcf7a"/><g stroke="#8fb2d8" stroke-width="2.4" opacity="0.8"><path d="M150 8 l-10 22"/><path d="M172 6 l-10 22"/><path d="M194 10 l-10 22"/><path d="M216 6 l-10 22"/><path d="M238 12 l-10 22"/></g><path d="M182 56 l48 6" stroke="#7a4a1d" stroke-width="5" stroke-linecap="round"/></svg>
@@ -331,7 +335,7 @@
         <li><b>16</b>Britain, Germany, France, Portugal: Cost-of-living protests; France fields 70,000 police. <i>(AFP)</i></li>
         <li><b>17</b>Barbados: Guterres laments COP31’s outcome before an AI-safety summit. <i>(UN)</i></li>
         <li><b>18</b>Wellington: India declare 720/9, the highest Test innings on New Zealand soil. <i>(Reuters)</i></li>
-        <li><b>19</b>Las Vegas: Verstappen wins the Grand Prix; Hamilton and Leclerc collide. <i>(PA)</i> <i class="sat">Sat 21 night local</i></li>
+        <li><b>19</b>Seattle: masked officers took two people off a boarding flight; it was delayed. <i>(AP)</i></li>
         <li><b>20</b>Sydney: Australia end England’s seven-match T20 winning run. <i>(SBS)</i></li>
         <li><b>21</b>Tripoli: Washington and Tripoli sign aviation and critical-minerals agreements. <i>(PANA)</i></li>
         <li><b>22</b>Kinshasa: health workers track a rare Ebola strain in an outbreak declared this autumn. <i>(Reuters)</i></li>
