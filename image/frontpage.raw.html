@@ -29,9 +29,9 @@
   .mast .dek { font-family: Georgia, serif; font-size: 12.8px; line-height: 1.35; color: #3b352c; margin-top: 3px; }
   .mast .dek i { color: var(--red); font-style: normal; font-weight: 700; }
 
-  .stats { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
-  .stat { padding: 4px 8px 5px; border-right: 1px solid var(--rule); }
-  .stat:last-child { border-right: 0; }
+  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
+  .stat { padding: 4px 0 5px; }
+  .stat:last-child { }
   .stat b { display: block; font-family: Georgia, serif; font-size: 26px; line-height: 1; color: var(--red);
             font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.5px; }
   .stat span { display: block; font-size: 9.4px; line-height: 1.2; color: var(--mute); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -43,7 +43,7 @@
   .regions .r-me { background: var(--red); }
   .regions .r-eu { background: var(--blue); }
   .regions .r-am { background: var(--green); }
-  .regions .r-ap { background: #2a4a7d; }
+  .regions .r-ap { background: #0f6b5c; }
   .regions .r-af { background: var(--brown); }
   .regions .r-oc { background: #6b3b6b; }
   .regions .r-wo { background: #4a4a4a; }
@@ -53,6 +53,7 @@
   .hero .art { height: 96px; position: relative; overflow: hidden; }
   .hero .art svg { width: 100%; height: 100%; display: block; }
   .hero .n { position: absolute; left: 0; top: 0; background: var(--red); color: #fff; font: 700 10px Arial; padding: 2px 6px; }
+  .hero .place { position: absolute; right: 0; top: 0; background: rgba(255,255,255,0.93); color: var(--ink); font: 700 9px Arial; letter-spacing: 0.1em; padding: 3px 6px; z-index: 2; }
   .hero .call { position: absolute; left: 6px; bottom: 6px; background: #fff; color: var(--ink);
                 font: 700 10px Arial; letter-spacing: 0.04em; padding: 2px 6px; }
   .hero .tag { position: absolute; right: 0; bottom: 0; color: #fff; font-size: 8px; font-weight: 700;
@@ -62,7 +63,7 @@
   .hero .txt { padding: 6px 8px 7px; flex: 1; display: flex; flex-direction: column; }
   .hero .k { font-size: 8.6px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--red); font-weight: 700; }
   .hero h2 { font-family: Georgia, serif; font-size: 19px; line-height: 1.04; margin: 3px 0 4px; letter-spacing: -0.2px; }
-  .hero p { font-size: 9.8px; line-height: 1.3; color: #2f2a23; }
+  .hero p { font-size: 9.8px; line-height: 1.3; color: #2f2a23; display: flex; flex-direction: column; flex: 1; }
   .hero p em { font-style: normal; color: var(--mute); display: block; margin-top: auto; padding-top: 4px; }
 
   .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 8px; }
@@ -70,13 +71,12 @@
   .tile .strip { height: 19px; position: relative; }
   .tile .strip span { position: absolute; left: 5px; top: 3px; color: #fff; font-size: 8.2px; font-weight: 600;
                       letter-spacing: 0.08em; text-transform: uppercase; }
-  .tile .strip b { display: inline-block; background: #fff; color: var(--ink); font-size: 8.2px;
-                   padding: 0 4px; margin-right: 4px; }
+  .tile .strip b { display: inline-block; background: #fff; color: var(--ink); font-size: 8.2px; padding: 0 4px; margin-right: 5px; }
   .tile .strip svg { position: absolute; right: 4px; top: 2px; width: 15px; height: 15px; opacity: 0.95; }
   .tile.me .strip { background: var(--red); }
   .tile.eu .strip { background: var(--blue); }
   .tile.am .strip { background: var(--green); }
-  .tile.ap .strip { background: #2a4a7d; }
+  .tile.ap .strip { background: #0f6b5c; }
   .tile.af .strip { background: var(--brown); }
   .tile h3 { font-family: Georgia, serif; font-size: 11.2px; line-height: 1.08; padding: 4px 6px 0; }
   .tile p { font-size: 8.5px; line-height: 1.26; color: #3a342c; padding: 3px 6px 0; }
@@ -91,10 +91,10 @@
   .order li:first-child { border-left: 0; }
   .order li b { display: block; font-size: 7.4px; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em; }
 
-  .bottom { display: grid; grid-template-columns: 336px 1fr; gap: 8px; margin-top: 6px; flex: 1; }
+  .bottom { display: grid; grid-template-columns: 322.67px 1fr; gap: 8px; margin-top: 6px; flex: 1; min-height: 0; }
   .mapbox { border: 1px solid var(--rule); background: #fbf9f3; padding: 4px 5px 5px; display: flex; flex-direction: column; }
   .mapbox .h { font-size: 7.9px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--mute); margin-bottom: 2px; }
-  .mapbox svg { width: 100%; flex: 1; display: block; min-height: 0; }
+  .mapbox svg { width: 100%; flex: 1; display: block; min-height: 0; aspect-ratio: 360 / 150; }
   .also { border: 1px solid var(--rule); background: #fbf9f3; padding: 4px 6px 5px; display: flex; flex-direction: column; }
   .also .h { font-size: 8.6px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; border-bottom: 1px solid var(--rule); padding-bottom: 2px; margin-bottom: 3px; }
   .also ol { list-style: none; columns: 2; column-gap: 12px; }
@@ -121,11 +121,11 @@
 
   <div class="mast">
     <h1>Sunday 22 November 2026</h1>
-    <div class="dek">No deal at COP31 · Iran claims two US radars, Manama disputes the target · four killed near Kyiv · India's <i>720/9</i> in New Zealand</div>
+    <div class="dek">No deal at COP31 · Iran claims two Patriot radars, Manama disputes the target · four killed near Kyiv · India's <i>720/9</i> in New Zealand</div>
   </div>
 
   <div class="stats">
-    <div class="stat"><b>48 h</b><span>of overtime before COP31 gave up</span></div>
+    <div class="stat"><b>48 h</b><span>of overtime before COP31 closed</span></div>
     <div class="stat"><b>24</b><span>body bags from one factory fire</span></div>
     <div class="stat"><b>16</b><span>dead from one batch of liquor</span></div>
     <div class="stat"><b>720/9</b><span>highest Test innings in New Zealand</span></div>
@@ -134,11 +134,11 @@
   </div>
 
   <div class="regions">
-    <div class="r-eu">Europe <span>5</span></div>
     <div class="r-me">Middle East <span>6</span></div>
-    <div class="r-am">Americas <span>7</span></div>
     <div class="r-ap">Asia-Pacific <span>7</span></div>
+    <div class="r-am">Americas <span>7</span></div>
     <div class="r-af">Africa <span>4</span></div>
+    <div class="r-eu">Europe <span>5</span></div>
     <div class="r-oc">Oceania <span>1</span></div>
     <div class="r-wo">World <span>3</span></div>
   </div>
@@ -146,8 +146,8 @@
   <div class="heroes">
     <div class="hero">
       <div class="art">
-        <span class="n">1</span>
-        <svg viewBox="0 0 300 96" preserveAspectRatio="none">
+        <span class="n">1</span><span class="place">ANTALYA</span>
+        <svg viewBox="0 0 300 96" preserveAspectRatio="xMidYMid slice">
           <rect width="300" height="96" fill="#1b2b3f"/>
           <g stroke="#8fb2d8" stroke-width="1.2" fill="none" opacity="0.5">
             <circle cx="150" cy="50" r="31"/><ellipse cx="150" cy="50" rx="31" ry="11"/>
@@ -168,8 +168,8 @@
 
     <div class="hero">
       <div class="art">
-        <span class="n">2</span>
-        <svg viewBox="0 0 300 96" preserveAspectRatio="none">
+        <span class="n">2</span><span class="place">MANAMA</span>
+        <svg viewBox="0 0 300 96" preserveAspectRatio="xMidYMid slice">
           <rect width="300" height="96" fill="#243b58"/>
           <g stroke="#ff8a72" stroke-width="1.7" fill="none" stroke-linecap="round">
             <path d="M58 82 L74 26"/><path d="M96 86 L106 34"/><path d="M134 90 L136 44"/>
@@ -180,20 +180,20 @@
           <path d="M196 49 v-10 h22 v10z" fill="#3e5d7d"/>
           <g stroke="#ffd9a0" stroke-width="1.3" fill="none" opacity="0.85"><path d="M186 70 h80"/><path d="M192 78 h68"/></g>
         </svg>
-        <span class="call">2 RADARS · TARGET DISPUTED</span>
+        <span class="call">SAT CLAIM · SUN ANSWER</span>
         <span class="tag dis">Target disputed</span>
       </div>
       <div class="txt">
         <div class="k">Middle East · Bahrain</div>
-        <h2>Iran says it hit two Patriot radars; Manama says a factory</h2>
-        <p>The Revolutionary Guard said missiles and drones struck radar sites at Al-Riffa and Awali, retaliation for airspace violations. Bahrain's interior ministry called the target a civilian industrial site and said two people were hurt. <em>(IRNA, BNA, Xinhua)</em></p>
+        <h2>Manama: the "radar strike" hit a factory</h2>
+        <p>Iran's Revolutionary Guard claimed missiles and drones hit radar sites at Al-Riffa and Awali on Saturday night. On Sunday Bahrain's interior ministry called the target a civilian industrial site, said two people were hurt and denied a base was struck. <em>(IRNA, BNA, Xinhua)</em></p>
       </div>
     </div>
 
     <div class="hero">
       <div class="art">
-        <span class="n">3</span>
-        <svg viewBox="0 0 300 96" preserveAspectRatio="none">
+        <span class="n">3</span><span class="place">KYIV</span>
+        <svg viewBox="0 0 300 96" preserveAspectRatio="xMidYMid slice">
           <rect width="300" height="96" fill="#141a26"/>
           <g fill="#2b3648">
             <rect x="8" y="48" width="26" height="38"/><rect x="40" y="34" width="20" height="52"/>
@@ -217,7 +217,7 @@
       <div class="txt">
         <div class="k">Europe · Ukraine</div>
         <h2>Four killed near Kyiv as drones hit flats</h2>
-        <p>Russian drone strikes hit apartment blocks outside the capital, killing four, as attacks intensified over several nights. In the Baltic the day before, drones set a Russian cargo ship ablaze; Finland took off its 16 crew. <em>(NHK, Reuters)</em></p>
+        <p>Russian drone strikes hit apartment blocks outside the capital, killing four, as attacks widened. In the Baltic the day before, drones set a Russian cargo ship ablaze; Finland rescued its 16 crew. <em>(NHK, Reuters)</em></p>
       </div>
     </div>
   </div>
@@ -259,8 +259,8 @@
       <div class="strip"><span><b>8</b>Asia-Pacific</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8z"/></svg>
       </div>
-      <h3>24 bodies from a candy factory fire</h3>
-      <p>After Saturday night's blaze in Banten, police said at least 24 body bags were recovered and about 30 were still missing.</p>
+      <h3>24 body bags at a candy factory</h3>
+      <p>After Saturday night's blaze in Banten, police said at least 24 body bags had been recovered and about 30 people were still missing.</p>
       <div class="src">Xinhua · 22 Nov</div>
     </div>
     <div class="tile ap">
@@ -268,7 +268,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M5 4h14l-7 8z"/><path d="M12 12v8"/></svg>
       </div>
       <h3>Moonshine toll reaches 16 in Manipur</h3>
-      <p>About 600 people are in hospital after drinking tainted liquor in Chandel district; six arrests have been made.</p>
+      <p>Health officials said about 600 people were in hospital after drinking tainted liquor in Chandel district; six arrests were made.</p>
       <div class="src">Xinhua · 22 Nov</div>
     </div>
 
@@ -301,7 +301,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
       </div>
       <h3>Pentagon curbs ties with Canada</h3>
-      <p>A classified memo restricts military cooperation with Ottawa; a senator briefed on it said it targets think tanks, not intelligence.</p>
+      <p>A classified memo restricts military cooperation with Ottawa; a senator briefed on it said it covers think-tank events, not intelligence sharing.</p>
       <div class="src">AP · 22 Nov</div>
     </div>
     <div class="tile af">
@@ -325,20 +325,20 @@
   <div class="order">
     <div class="h">The day in order</div>
     <ol>
+      <li><b>00:30 utc</b>Hong Kong opens its polls</li>
       <li><b>02:30 utc</b>Four raids hit Sanaa's fuel depots</li>
-      <li><b>morning utc</b>Hong Kong opens its polls</li>
-      <li><b>midday utc</b>COP31's plenary closes with no pact</li>
-      <li><b>afternoon utc</b>Guterres, in Barbados: "deeply disappointed"</li>
-      <li><b>evening utc</b>Bahrain answers Tehran's radar claim</li>
-      <li><b>night utc</b>Seattle arrests and the Cape toll reported</li>
+      <li><b>12:00 utc</b>COP31's plenary closes with no pact</li>
+      <li><b>15:00 utc</b>Guterres, in Barbados, laments the outcome</li>
+      <li><b>18:00 utc</b>Bahrain answers Tehran's radar claim</li>
+      <li><b>22:00 utc</b>Seattle arrests and the Cape toll reported</li>
     </ol>
   </div>
 
   <div class="bottom">
     <div class="mapbox">
-      <div class="h">Where it happened · pins are story numbers</div>
-      <svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid slice">
-        <rect width="360" height="150" fill="#eee8d9"/>
+      <div class="h">Where it happened · 32 of 33 pins carry story numbers</div>
+      <svg viewBox="0 0 360 150" preserveAspectRatio="xMidYMid meet">
+        <rect width="360" height="150" fill="#fbf9f3"/>
         <path d="__MAP_PATH__" fill="#bdb29c" fill-rule="evenodd" stroke="#a89d86" stroke-width="0.3"/>
         <g id="pins"></g>
       </svg>
@@ -346,9 +346,9 @@
     <div class="also">
       <div class="h">Also on Sunday 22 November — 18 more stories</div>
       <ol>
-        <li><b>16</b> Denmark says police foiled a Russian-planned assassination of a US-Ukrainian citizen and expels Moscow's defence attaché. <i>(DR)</i></li>
+        <li><b>16</b> Denmark expels Russia's defence attaché over a plot it says Moscow ran against a Ukrainian citizen in Copenhagen. <i>(DR)</i></li>
         <li><b>17</b> Cost-of-living protests across Britain, Germany, France and Portugal; France fields 70,000 police. <i>(AFP)</i></li>
-        <li><b>18</b> Guterres, in Barbados, calls COP31's collapse "deeply disappointing" before an AI-safety summit. <i>(UN)</i></li>
+        <li><b>18</b> Guterres, in Barbados, laments COP31's outcome before an AI-safety summit. <i>(UN)</i></li>
         <li><b>19</b> India declare 720/9 at Wellington, the highest Test innings ever on New Zealand soil. <i>(Reuters)</i></li>
         <li><b>20</b> Verstappen wins the Las Vegas Grand Prix, run on Saturday night local, as Hamilton and Leclerc collide. <i>(PA)</i></li>
         <li><b>21</b> Australia end England's seven-match T20 winning run. <i>(SBS)</i></li>
