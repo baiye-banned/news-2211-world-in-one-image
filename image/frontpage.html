@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunday 22 November 2026 — world news in one image</title>
+<style>
+  @page { size: 1024px 1024px; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { width: 1024px; height: 1024px; }
+  body {
+    background: #f3efe6;
+    color: #16130f;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 1024px; height: 1024px;
+    padding: 24px 38px 18px;
+    display: flex; flex-direction: column;
+    background-image:
+      radial-gradient(1200px 500px at 82% -20%, rgba(179, 36, 27, 0.06), transparent 60%);
+  }
+
+  /* ---------- top rule ---------- */
+  .strip {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #6b6257; padding-bottom: 9px; border-bottom: 3px solid #16130f;
+  }
+  .strip b { color: #b3241b; letter-spacing: 0.14em; }
+
+  /* ---------- masthead ---------- */
+  .mast { display: flex; align-items: flex-end; gap: 22px; padding: 10px 0 11px; border-bottom: 1px solid #c9c0b1; }
+  .dateline { display: flex; align-items: baseline; gap: 14px; }
+  .day {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 132px; line-height: 0.82; font-weight: 700; letter-spacing: -7px; color: #16130f;
+  }
+  .month { font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1; font-weight: 700; }
+  .month small { display: block; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; color: #6b6257; margin-top: 7px; }
+  .headline-block { margin-left: auto; text-align: right; }
+  .headline-block .k { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #b3241b; font-weight: 700; }
+  .headline-block .t { font-family: Georgia, serif; font-size: 27px; line-height: 1.12; font-weight: 700; margin-top: 6px; max-width: 420px; }
+
+  /* ---------- lead ---------- */
+  .lead { display: grid; grid-template-columns: 1fr 292px; gap: 26px; padding: 15px 0 12px; border-bottom: 1px solid #c9c0b1; }
+  .kicker { font-size: 12.5px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 700; color: #b3241b; }
+  .lead h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 55px; line-height: 0.98; letter-spacing: -1.6px; font-weight: 700; margin: 9px 0 12px;
+  }
+  .lead .stand { font-family: Georgia, serif; font-size: 19px; line-height: 1.34; color: #2c2721; max-width: 620px; }
+  .lead .stand b { font-weight: 700; }
+  .art { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 8px; }
+  .art svg { width: 250px; height: 250px; display: block; }
+  .art .cap { font-size: 11.5px; line-height: 1.35; color: #6b6257; text-align: center; max-width: 250px; }
+
+  /* ---------- cards ---------- */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; flex: 1; }
+  .card { padding: 11px 20px 10px 0; border-bottom: 1px solid #d8d0c2; }
+  .card:nth-child(odd) { padding-right: 20px; border-right: 1px solid #d8d0c2; }
+  .card:nth-child(even) { padding-left: 20px; }
+  .card:nth-child(3), .card:nth-child(4) { border-bottom: 0; padding-bottom: 6px; }
+  .card .k { font-size: 11.5px; letter-spacing: 0.19em; text-transform: uppercase; font-weight: 700; color: #b3241b; }
+  .card .krow { display: flex; align-items: center; gap: 10px; }
+  .card .krow svg { width: 26px; height: 26px; margin-left: auto; flex: 0 0 26px; opacity: 0.9; }
+  .card h2 { font-family: Georgia, serif; font-size: 27px; line-height: 1.03; letter-spacing: -0.5px; font-weight: 700; margin: 6px 0 7px; }
+  .card p { font-size: 14px; line-height: 1.38; color: #3a342c; }
+
+  /* ---------- also ---------- */
+  .also { border-top: 3px solid #16130f; padding-top: 9px; }
+  .also .h { font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700; color: #16130f; margin-bottom: 8px; }
+  .also ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px 22px; }
+  .also li { font-size: 12.5px; line-height: 1.3; color: #3a342c; padding-left: 12px; position: relative; }
+  .also li::before { content: "▪"; position: absolute; left: 0; top: -1px; color: #b3241b; font-size: 10px; }
+  .also li b { color: #16130f; font-weight: 700; }
+
+  .foot { margin-top: auto; padding-top: 10px; display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b8275; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="strip">
+    <span>World news in one image</span>
+    <span><b>Sunday</b> · 22 November 2026</span>
+  </div>
+
+  <div class="mast">
+    <div class="dateline">
+      <div class="day">22</div>
+      <div class="month">November<small>2026</small></div>
+    </div>
+    <div class="headline-block">
+      <div class="k">The day at a glance</div>
+      <div class="t">No climate deal, a widening Iran conflict, and a drone war reaching the Baltic</div>
+    </div>
+  </div>
+
+  <div class="lead">
+    <div>
+      <div class="kicker">Climate · Antalya</div>
+      <h1>COP31 ends with no deal</h1>
+      <p class="stand">After two weeks and two days of overtime, the 31st climate summit failed to adopt the <b>Antalya Pact</b>. The EU and others called the final draft too weak on fossil fuels; chair Murat Kurum said there was “nothing to do”, and left the stage as delegates spoke.</p>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 200 200" role="img" aria-label="A cracked globe">
+        <circle cx="100" cy="100" r="72" fill="none" stroke="#16130f" stroke-width="3.5"/>
+        <ellipse cx="100" cy="100" rx="72" ry="27" fill="none" stroke="#16130f" stroke-width="1.6" opacity="0.5"/>
+        <ellipse cx="100" cy="100" rx="72" ry="52" fill="none" stroke="#16130f" stroke-width="1.6" opacity="0.35"/>
+        <ellipse cx="100" cy="100" rx="29" ry="72" fill="none" stroke="#16130f" stroke-width="1.6" opacity="0.5"/>
+        <path d="M100 28 L92 62 L108 84 L86 104 L104 126 L94 172" fill="none" stroke="#b3241b" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M106 78 L138 66 M96 112 L64 128" fill="none" stroke="#b3241b" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="#b3241b" stroke-width="1.6" stroke-dasharray="2 8" opacity="0.55"/>
+      </svg>
+      <div class="cap">196 countries, no agreement: the Antalya Pact was not adopted.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="krow"><div class="k">Middle East · Bahrain</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#16130f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="14.5" cy="9.5" r="6.2"/><circle cx="14.5" cy="9.5" r="2.1" fill="#b3241b" stroke="none"/>
+          <path d="M2.6 21.4l6.9-6.9"/><path d="M2.6 21.4l.9-4.6 3.7 3.7z" fill="#16130f"/>
+        </svg>
+      </div>
+      <h2>Iran says it struck two US bases</h2>
+      <p>Revolutionary Guard missiles and drones hit US positions at Al-Riffa and Awali, which Tehran called retaliation for airspace violations. A tanker struck a mine and burned off Hormuz.</p>
+    </div>
+    <div class="card">
+      <div class="krow"><div class="k">Ukraine · Baltic</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#16130f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.4 16.4h19.2l-2.6 3.8H5z"/>
+          <path d="M7 16.4v-5h5.3v5"/>
+          <path d="M15.8 8.6c1.8.7 2.7 1.8 2.9 3.4"/>
+          <path d="M15.4 4.6c2.4 1 3.6 2.6 3.8 4.9" stroke="#b3241b"/>
+        </svg>
+      </div>
+      <h2>Four killed near Kyiv; a Russian ship burns</h2>
+      <p>Drone strikes hit flats outside the capital. In the Gulf of Finland a Russian cargo ship was set ablaze by drones and 16 crew were rescued by Finland.</p>
+    </div>
+    <div class="card">
+      <div class="krow"><div class="k">Yemen · Sanaa</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#16130f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4.4" y="10" width="9.2" height="11" rx="1.4"/>
+          <path d="M4.4 14h9.2M4.4 17.6h9.2"/>
+          <path d="M18.4 3.6c1.9 2.5 2.8 4.3 2.8 5.9a2.8 2.8 0 0 1-5.6 0c0-1.6.9-3.4 2.8-5.9z" fill="#b3241b" stroke="none"/>
+        </svg>
+      </div>
+      <h2>Air strikes hit the capital’s fuel depots</h2>
+      <p>Four raids on Sanaa destroyed the city’s largest fuel station and damaged the state oil company; six were hurt. The Houthis blamed the Saudi-led coalition.</p>
+    </div>
+    <div class="card">
+      <div class="krow"><div class="k">Americas · United States</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#16130f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.8 13.6l7.4-1.5 3.2-7.6 1.9.4-1.7 7.3 4.8-.9 1.7 1.4-7.4 2.3-.9 4.6-1.7-.3.9-4.4-5 1.1z" fill="#f3efe6"/>
+          <circle cx="19.6" cy="18" r="1.5" fill="#b3241b" stroke="none"/>
+        </svg>
+      </div>
+      <h2>Masked agents seize two at Seattle airport</h2>
+      <p>Immigration officers took two people off a jet bridge as passengers boarded, delaying the flight. In California a billionaire-tax drive lost a court round.</p>
+    </div>
+  </div>
+
+  <div class="also">
+    <div class="h">Also on the day</div>
+    <ul>
+      <li><b>Denmark:</b> police foil a Russian-planned assassination; Moscow’s defence attaché is expelled</li>
+      <li><b>Europe:</b> cost-of-living protests in Britain, Germany, France and Portugal; 70,000 police in France</li>
+      <li><b>Brazil:</b> a severe storm kills at least three in the south</li>
+      <li><b>Technology:</b> a model is reported to have helped crack a long-open maths problem</li>
+      <li><b>Cricket:</b> Australia ends England’s seven-match T20 winning run</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <span>One day · one image · the events of 22 November 2026</span>
+    <span>Compiled from that day’s reporting</span>
+  </div>
+</div>
+</body>
+</html>
