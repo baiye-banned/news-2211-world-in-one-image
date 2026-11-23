@@ -34,21 +34,16 @@
   .regions div { background: var(--blue); color: #fff; font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase;
                  text-align: center; padding: 3px 2px; }
   .regions div span { color: #ffd9a0; font-weight: 700; }
-  .regions .r-me { background: #b3241b; }
-  .regions .r-ap { background: #0f6b5c; }
-  .regions .r-am { background: #3c5d3a; }
-  .regions .r-af { background: #7a4a1d; }
-  .regions .r-eu { background: #1f3a68; }
-  .regions .r-oc { background: #6b3b6b; }
-  .regions .r-wo { background: #4a4a4a; }
+  .regions div:nth-child(2n) { background: #2a4a7d; }
 
   .heroes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
   .hero { border: 1px solid var(--rule); background: #fbf9f3; display: flex; flex-direction: column; }
-  .hero .art { height: 88px; position: relative; overflow: hidden; }
+  .hero .art { height: 100px; position: relative; overflow: hidden; }
   .hero .art svg { width: 100%; height: 100%; display: block; }
   .hero .n { position: absolute; left: 0; top: 0; background: var(--red); color: #fff; font: 700 9px Arial; padding: 2px 5px; }
   .hero .tag { position: absolute; right: 0; bottom: 0; background: rgba(21,18,14,0.82); color: #fff; font-size: 7.5px;
                letter-spacing: 0.1em; padding: 2px 5px; text-transform: uppercase; }
+  .hero .tag.conf { background: #23624a; }
   .hero .tag.claim { background: var(--red); }
   .hero .txt { padding: 6px 8px 7px; }
   .hero .k { font-size: 8.4px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); font-weight: 700; }
@@ -58,21 +53,19 @@
 
   .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; margin-top: 5px; }
   .tile { border: 1px solid var(--rule); background: #fbf9f3; padding: 0 0 4px; display: flex; flex-direction: column; }
-  .tile .strip { height: 18px; display: flex; align-items: center; gap: 5px; padding-right: 5px; overflow: hidden; }
-  .tile .strip b { background: #fff; color: var(--ink); font-size: 8.2px; font-weight: 700; padding: 1px 5px; }
-  .tile .strip .fact { color: #fff; font-size: 8.4px; font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; }
-
-  .tile .strip.me { background: #b3241b; }
-  .tile .strip.ap { background: #0f6b5c; }
-  .tile .strip.am { background: #3c5d3a; }
-  .tile .strip.af { background: #7a4a1d; }
-  .tile .kicker { font-size: 6.8px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mute); padding: 3px 6px 0; }
+  .tile .strip { height: 18px; position: relative; }
+  .tile .strip span { position: absolute; left: 5px; top: 3px; color: #fff; font-size: 7.8px; font-weight: 600;
+                      letter-spacing: 0.09em; text-transform: uppercase; }
+  .tile .strip svg { position: absolute; right: 4px; top: 2px; width: 14px; height: 14px; opacity: 0.95; }
+  .tile:nth-child(3n+1) .strip { background: var(--red); }
+  .tile:nth-child(3n+2) .strip { background: var(--blue); }
+  .tile:nth-child(3n+3) .strip { background: #3c5d3a; }
   .tile h3 { font-family: Georgia, serif; font-size: 11px; line-height: 1.08; padding: 4px 6px 0; }
-  .tile p { font-size: 8px; line-height: 1.24; color: #3a342c; padding: 3px 6px 0; }
+  .tile p { font-size: 8.5px; line-height: 1.28; color: #3a342c; padding: 3px 6px 0; }
   .tile .src { font-size: 7.4px; color: var(--mute); padding: 3px 6px 0; margin-top: auto; text-transform: uppercase; letter-spacing: 0.05em; }
   .tile .src .st { color: var(--red); font-weight: 700; letter-spacing: 0.06em; margin-right: 6px; }
 
-  .order { display: flex; align-items: center; gap: 6px; margin-top: 3px; border-top: 1px solid var(--rule);
+  .order { display: flex; align-items: center; gap: 6px; margin-top: 5px; border-top: 1px solid var(--rule);
            border-bottom: 1px solid var(--rule); padding: 3px 0; }
   .order .h { font-size: 7.6px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; color: var(--red); white-space: nowrap; }
   .order ol { list-style: none; display: flex; flex: 1; gap: 0; }
@@ -86,7 +79,7 @@
   .also { border: 1px solid var(--rule); background: #fbf9f3; padding: 4px 6px 4px; }
   .also .h { font-size: 8.4px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; border-bottom: 1px solid var(--rule); padding-bottom: 2px; margin-bottom: 3px; }
   .also ol { list-style: none; columns: 2; column-gap: 12px; }
-  .also li { font-size: 7.8px; line-height: 1.24; color: #2f2a23; padding-left: 13px; position: relative; margin-bottom: 1.5px; break-inside: avoid; }
+  .also li { font-size: 8.15px; line-height: 1.3; color: #2f2a23; padding-left: 13px; position: relative; margin-bottom: 1.5px; break-inside: avoid; }
   .also li b { position: absolute; left: 0; color: var(--red); font-size: 6.8px; top: 1px; }
   .also li i { color: var(--mute); font-style: normal; }
 
@@ -103,7 +96,7 @@
 
   <div class="bar">
     <span>The world in one day</span>
-    <span><b>36 stories</b> · 7 regions · every one dated <b>Sunday 22 November 2026</b></span>
+    <span><b>33 stories</b> · 7 regions · every one dated <b>Sunday 22 November 2026</b></span>
   </div>
 
   <div class="mast">
@@ -114,20 +107,20 @@
   <div class="stats">
     <div class="stat"><b>48h</b><span>of overtime, then no pact</span></div>
     <div class="stat"><b>24</b><span>body bags from one factory fire</span></div>
-    <div class="stat"><b>70,000</b><span>police on the streets of France</span></div>
+    <div class="stat"><b>16</b><span>dead from one batch of liquor</span></div>
     <div class="stat"><b>720/9</b><span>India's record Test innings</span></div>
-    <div class="stat"><b>43</b><span>rescued in the Mediterranean</span></div>
+    <div class="stat"><b>10</b><span>killed in two Cape shootings</span></div>
     <div class="stat"><b>2h</b><span>of daily power cuts in Iran</span></div>
   </div>
 
   <div class="regions">
-    <div class="r-eu">Europe <span>7</span></div>
-    <div class="r-me">Middle East <span>6</span></div>
-    <div class="r-am">Americas <span>8</span></div>
-    <div class="r-ap">Asia-Pacific <span>7</span></div>
-    <div class="r-af">Africa <span>4</span></div>
-    <div class="r-oc">Oceania <span>1</span></div>
-    <div class="r-wo">World <span>3</span></div>
+    <div>Europe <span>5</span></div>
+    <div>Middle East <span>6</span></div>
+    <div>Americas <span>7</span></div>
+    <div>Asia-Pacific <span>7</span></div>
+    <div>Africa <span>4</span></div>
+    <div>Oceania <span>1</span></div>
+    <div>World <span>3</span></div>
   </div>
 
   <div class="heroes">
@@ -143,7 +136,7 @@
           <path d="M150 18 L143 40 L157 56 L138 70 L150 78" fill="none" stroke="#e2503f" stroke-width="3.4" stroke-linejoin="round"/>
           <path d="M158 50 L190 42 M140 64 L108 74" stroke="#e2503f" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
         </svg>
-        <span class="tag">Reported</span>
+        <span class="tag conf">Confirmed</span>
       </div>
       <div class="txt">
         <div class="k">Climate · World</div>
@@ -197,7 +190,7 @@
           <g stroke="#e2503f" stroke-width="1.6" stroke-dasharray="3 4" opacity="0.85"><path d="M188 24 L228 52"/><path d="M218 34 L252 56"/></g>
           <g fill="#ff9d8f"><circle cx="230" cy="54" r="3"/><circle cx="254" cy="58" r="2.4"/></g>
         </svg>
-        <span class="tag">Reported</span>
+        <span class="tag conf">Confirmed</span>
       </div>
       <div class="txt">
         <div class="k">Europe · Ukraine</div>
@@ -209,95 +202,108 @@
 
   <div class="tiles">
     <div class="tile">
-      <div class="strip me"><b>4</b><span class="fact">2h a day</span></div>
-      <div class="kicker">Tehran, Iran · Energy</div>
+      <div class="strip"><span>4 · Middle East</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M13 2 L5 14h6l-2 8 10-13h-6z"/></svg>
+      </div>
       <h3>Iran starts rationing electricity</h3>
       <p>Rolling cuts of up to two hours a day begin, after strikes on energy plants since February.</p>
-      <div class="src"><b class="st">REPORTED</b>AFP · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>AFP · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip me"><b>5</b><span class="fact">No Oct 7 inquiry</span></div>
-      <div class="kicker">Jerusalem · Politics</div>
+      <div class="strip"><span>5 · Middle East</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+      </div>
       <h3>Likud sets terms for a unity cabinet</h3>
       <p>Netanyahu's party wants security zones in Gaza, Lebanon and Syria kept, and no Oct 7 inquiry, as Eisenkot's party holds talks.</p>
-      <div class="src"><b class="st">REPORTED</b>IANS · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>IANS · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip me"><b>6</b><span class="fact">4 strikes</span></div>
-      <div class="kicker">Sanaa, Yemen · Conflict</div>
+      <div class="strip"><span>6 · Middle East</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 18h18l-3 4H6z"/><path d="M7 18V9h6v9"/></svg>
+      </div>
       <h3>Raids hit Sanaa's fuel depots</h3>
       <p>Four strikes destroyed the capital's largest fuel station and damaged the state oil company; six hurt.</p>
-      <div class="src"><b class="st">REPORTED</b>VOV · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>VOV · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip ap"><b>7</b><span class="fact">31 seats</span></div>
-      <div class="kicker">Hong Kong · Election</div>
+      <div class="strip"><span>7 · Asia-Pacific</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 20v-6h16v6"/><path d="M12 4v8"/><path d="M8 8h8"/></svg>
+      </div>
       <h3>Hong Kong votes for its electors</h3>
       <p>Polling opened in 31 contested subsectors of the 1,500-seat Election Committee that picks the chief executive.</p>
-      <div class="src"><b class="st">OFFICIAL</b>ISD HK · 22 Nov</div>
+      <div class="src"><b class="st">OFFICIAL · ON RECORD</b>ISD HK · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip ap"><b>8</b><span class="fact">24 bags</span></div>
-      <div class="kicker">Banten, Indonesia · Fire</div>
+      <div class="strip"><span>8 · Asia-Pacific</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8z"/></svg>
+      </div>
       <h3>24 body bags at a candy factory</h3>
       <p>After Saturday night's blaze in Banten, police said 24 body bags were recovered and about 30 were still missing.</p>
-      <div class="src"><b class="st">REPORTED</b>Xinhua · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>Xinhua · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip ap"><b>9</b><span class="fact">16 dead</span></div>
-      <div class="kicker">Manipur, India · Health</div>
+      <div class="strip"><span>9 · Asia-Pacific</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M5 4h14l-7 8z"/><path d="M12 12v8"/></svg>
+      </div>
       <h3>Moonshine toll reaches 16 in Manipur</h3>
       <p>About 600 people are in hospital after drinking tainted liquor in Chandel district; six arrests have been made.</p>
-      <div class="src"><b class="st">REPORTED</b>Xinhua · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>Xinhua · 22 Nov</div>
     </div>
 
     <div class="tile">
-      <div class="strip am"><b>10</b><span class="fact">2 removed</span></div>
-      <div class="kicker">Seattle, US · Immigration</div>
+      <div class="strip"><span>10 · Americas</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 13h18l-3 6H6z"/><path d="M12 3v10"/></svg>
+      </div>
       <h3>Agents seize two on a jet bridge</h3>
       <p>Masked immigration officers took two people off a boarding flight at Seattle-Tacoma, delaying it.</p>
-      <div class="src"><b class="st">REPORTED</b>AP · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>AP · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip am"><b>11</b><span class="fact">Court setback</span></div>
-      <div class="kicker">California, US · Tax</div>
+      <div class="strip"><span>11 · Americas</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 19h16"/><path d="M7 19V9l5-4 5 4v10"/></svg>
+      </div>
       <h3>Billionaire tax drive loses a round</h3>
       <p>California's first-in-the-nation wealth tax proposal was set back in court the day before its signature deadline.</p>
-      <div class="src"><b class="st">REPORTED</b>AP · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>AP · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip am"><b>12</b><span class="fact">3 killed</span></div>
-      <div class="kicker">Rio Grande do Sul · Storm</div>
+      <div class="strip"><span>12 · Americas</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 16l4-7 4 4 4-9 4 12z"/></svg>
+      </div>
       <h3>Storm kills three in southern Brazil</h3>
       <p>A severe storm battered a city in the south, killing at least three and cutting power.</p>
-      <div class="src"><b class="st">REPORTED</b>CCTV · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>CCTV · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip am"><b>13</b><span class="fact">Memo limits ties</span></div>
-      <div class="kicker">Washington · Defence</div>
+      <div class="strip"><span>13 · Americas</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5"/></svg>
+      </div>
       <h3>Pentagon curbs ties with Canada</h3>
       <p>A classified memo restricts military cooperation with Ottawa; a senator said it targets think tanks, not intelligence.</p>
-      <div class="src"><b class="st">REPORTED</b>AP · 22 Nov</div>
+      <div class="src"><b class="st">REPORTED · ONE WIRE</b>AP · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip af"><b>14</b><span class="fact">10 dead</span></div>
-      <div class="kicker">Cape Town · Police</div>
+      <div class="strip"><span>14 · Africa</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
+      </div>
       <h3>Ten killed in two Cape shootings</h3>
       <p>Gunmen opened fire in a Khayelitsha tavern and at a second scene in the Western Cape; eight were wounded.</p>
-      <div class="src"><b class="st">OFFICIAL</b>SAPS · 22 Nov</div>
+      <div class="src"><b class="st">OFFICIAL · ON RECORD</b>SAPS · 22 Nov</div>
     </div>
     <div class="tile">
-      <div class="strip af"><b>15</b><span class="fact">4 states</span></div>
-      <div class="kicker">Khartoum · UN report</div>
+      <div class="strip"><span>15 · Africa</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M4 20V6l8 8 8-8v14"/></svg>
+      </div>
       <h3>UN experts: mercenaries fuel Sudan</h3>
       <p>A fact-finding mission said foreign fighters and arms from Chad, Libya, the UAE and Colombia are prolonging the war.</p>
-      <div class="src"><b class="st">OFFICIAL</b>UN · 22 Nov</div>
+      <div class="src"><b class="st">OFFICIAL · ON RECORD</b>UN · 22 Nov</div>
     </div>
   </div>
 
   <div class="order">
     <div class="h">The day in order</div>
-    <ol><li><b>02:30 UTC</b>Four raids hit Sanaa's fuel depots</li>
+    <ol>
+      <li><b>02:30 UTC</b>Four raids hit Sanaa's fuel depots</li>
       <li><b>morning</b>Hong Kong opens its polls</li>
       <li><b>midday</b>COP31's plenary ends without a pact</li>
       <li><b>afternoon</b>Guterres, in Barbados, calls it a failure</li>
@@ -316,41 +322,38 @@
       </svg>
     </div>
     <div class="also">
-      <div class="h">Also on Sunday 22 November — 21 more stories</div>
+      <div class="h">Also on Sunday 22 November — 18 more stories</div>
       <ol>
-        <li><b>16</b> Denmark says police foiled a Russian-planned assassination of a Ukrainian citizen and expels Moscow’s defence attaché. <i>(DR)</i></li>
-        <li><b>17</b> Britain, Germany, France, Portugal cost-of-living protests in four countries. <i>(AFP)</i></li>
-        <li><b>18</b> France fields 70,000 police for the protests. <i>(AFP)</i></li>
-        <li><b>19</b> Gulf of Finland a Russian cargo ship set ablaze by drones is still burning; Finland rescued its 16 crew. (Sat 21) <i>(Reuters)</i></li>
-        <li><b>20</b> Barbados Guterres laments COP31’s outcome before an AI-safety summit. <i>(UN)</i></li>
-        <li><b>21</b> Wellington India declare 720/9, the highest Test innings on New Zealand soil. <i>(Reuters)</i></li>
-        <li><b>22</b> Las Vegas Verstappen wins the Grand Prix, run on Saturday night local. <i>(PA)</i></li>
-        <li><b>23</b> Las Vegas Hamilton and Leclerc collide during the race. <i>(PA)</i></li>
-        <li><b>24</b> Sydney Australia end England’s seven-match T20 winning run. <i>(SBS)</i></li>
-        <li><b>25</b> Washington and Tripoli sign aviation and critical-minerals agreements. <i>(PANA)</i></li>
-        <li><b>26</b> Kinshasa six months into the outbreak, scientists study the rare Bundibugyo Ebola strain. <i>(Reuters)</i></li>
-        <li><b>27</b> Galápagos floods after El Niño rains close roads and cut power. <i>(CCTV)</i></li>
-        <li><b>28</b> Washington Trump tells Fox he leans toward another strike on Iran if no deal is reached by the new year. <i>(Fox)</i></li>
-        <li><b>29</b> Quneitra a fifth Israeli incursion since dawn, Syrian state media report. <i>(SANA)</i></li>
-        <li><b>30</b> Tokyo Takaichi was passed over for a Xi meeting at APEC, Asahi reports. <i>(Asahi)</i></li>
-        <li><b>31</b> Davao candles on the eve of the Maguindanao massacre’s 17th anniversary. <i>(GMA)</i></li>
-        <li><b>32</b> Caracas Delcy Rodríguez urges young people to “believe again” in the country. <i>(Última Hora)</i></li>
-        <li><b>33</b> Ravenna the Humanity 1 heads for port with 43 people rescued, 13 of them children. <i>(Ravenna Notizie)</i></li>
-        <li><b>34</b> Kabul the Taliban accuse Pakistan of backing armed groups; Islamabad calls it propaganda. <i>(DW)</i></li>
-        <li><b>35</b> Tuscany an orange rain warning as storms cross Italy. <i>(Meteoalarm)</i></li>
-        <li><b>36</b> — a model is reported to have helped crack a long-open mathematics problem. <i>(SBS)</i></li>
+        <li><b>16</b> Denmark says police foiled a Russian-planned assassination of a US-Ukrainian citizen and expels Moscow's defence attaché. <i>(DR)</i></li>
+        <li><b>17</b> Cost-of-living protests across Britain, Germany, France and Portugal; France fields 70,000 police. <i>(AFP)</i></li>
+        <li><b>18</b> Guterres, in Barbados, calls COP31's collapse "deeply disappointing" before an AI-safety summit. <i>(UN)</i></li>
+        <li><b>19</b> India declare 720/9 at Wellington, the highest Test innings ever on New Zealand soil. <i>(Reuters)</i></li>
+        <li><b>20</b> Verstappen wins the Las Vegas Grand Prix as Hamilton and Leclerc collide. <i>(PA)</i></li>
+        <li><b>21</b> Australia end England's seven-match T20 winning run. <i>(SBS)</i></li>
+        <li><b>22</b> Washington and Tripoli sign aviation and critical-minerals agreements. <i>(PANA)</i></li>
+        <li><b>23</b> Six months into Congo's outbreak, scientists study the rare Bundibugyo Ebola strain. <i>(Reuters)</i></li>
+        <li><b>24</b> Ecuador's Galápagos floods after El Niño rains close roads and cut power. <i>(CCTV)</i></li>
+        <li><b>25</b> Trump tells Fox he leans toward another strike on Iran if no deal is reached by the new year. <i>(Fox)</i></li>
+        <li><b>26</b> A model is reported to have helped crack a long-open mathematics problem. <i>(SBS)</i></li>
+        <li><b>27</b> Japan's PM Takaichi was passed over for a Xi meeting at APEC, Asahi reports. <i>(Asahi)</i></li>
+        <li><b>28</b> Israel makes a fifth incursion into Quneitra since dawn, Syrian state media reports. <i>(SANA)</i></li>
+        <li><b>29</b> Candles are lit in Davao on the 17th anniversary of the Maguindanao massacre. <i>(GMA)</i></li>
+        <li><b>30</b> Venezuela's Delcy Rodríguez urges young people to "believe again" in the country. <i>(Última Hora)</i></li>
+        <li><b>31</b> The Humanity 1 heads for Ravenna with 43 people rescued in the Mediterranean, 13 of them children. <i>(Ravenna Notizie)</i></li>
+        <li><b>32</b> Afghanistan's Taliban accuse Pakistan of backing armed groups; Islamabad calls it propaganda. <i>(DW)</i></li>
+        <li><b>33</b> Italy issues an orange rain warning for Tuscany as storms cross the peninsula. <i>(Meteoalarm)</i></li>
       </ol>
     </div>
   </div>
 
   <div class="check">
     <div class="t">Date check</div>
-    <p>Left out as other days' news: Mexico's capture of Fausto Isidro (Fri 20) · the triple-tap strike on Kryvyi Rih (Fri 20) · Iran's radar claim itself (Sat 21 evening, answered by Bahrain on Sunday) · the UK–EU summit's 72 agreements (Sat 21). Every numbered story above was reported on Sunday 22 November.</p>
+    <p>Left out as other days' news: Mexico's capture of Fausto Isidro (Fri 20) · the triple-tap strike on Kryvyi Rih (Fri 20) · the drone hit on a Russian cargo ship in the Gulf of Finland (Sat 21, carried here as context only) · Iran's radar claim itself (Sat 21 evening, answered by Bahrain on Sunday) · the UK–EU summit's 72 agreements (Sat 21). Every numbered story above was reported on Sunday 22 November.</p>
   </div>
 
   <div class="foot">
     <span>One day · one image · 22 November 2026</span>
-    <span>Official = on the record · Reported = one wire · Claim = one side’s account, labelled</span>
+    <span>Official = on the record · Confirmed = two or more wires · Reported = one wire · Claim = one side’s account, labelled</span>
   </div>
 </div>
 </body>
